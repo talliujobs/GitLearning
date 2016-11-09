@@ -152,4 +152,4 @@ git branch -d dev
 
 ### 解决冲突 ###
 以下内容为测试
-Creating a branch is quick AND simple.
+Creating a new branch is quick AND simple.
