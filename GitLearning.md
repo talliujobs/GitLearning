@@ -179,6 +179,41 @@ git branch -d dev
 </pre>
 
 ### 分支管理策略 ###
+在实际开发中，我们应该按照几个基本原则进行分支管理：  
+首先，master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；  
+那在哪干活呢？干活都在dev分支上，也就是说，dev分支是不稳定的，到某个时候，比如1.0版本发布时，再把dev分支合并到master上，在master分支发布1.0版本；  
+你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。  
+
+**小结**  
+合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+
+### Bug分支 ###
+
+
 ```
- git checkout -b dev
+#把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+git stash
+#在master分支上修改bug
+git checkout master
+git checkout -b issue-101
+#修改完成后
+git add "file"
+git commit -m "fix bug 101"
+#切换到master分支，并完成合并，最后删除issue-101分支
+git checkout master
+git merge --no-ff -m "merged bug fix 101" issue-101
+git branch -d issue-101
+
+#返回dev分支接着干活
+git checkout dev
+#查看stash内容列表
+git stash list
+
+#使用 git stash apply 或者 git stash pop 来恢复stash内容
+#apply，恢复后，stash内容并不删除，需要用git stash drop来删除
+git stash apply
+#pop，恢复的同时把stash内容也删了
+git stash pop
+#恢复指定的stash
+git stash apply stash@{0}
 ```
