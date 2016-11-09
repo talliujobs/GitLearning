@@ -29,3 +29,13 @@ git config --global user.email "talliujobs@gmail.com"
  git commit -m "创建版本库，OK"
 
  ```
+
+ ## 时光穿梭机 ##
+```
+#查看仓库当前的状态
+git status
+#查看具体修改的内容，按q退出
+git diff
+git add GitLearning.md
+
+### 这是随便写的内容，接下来我要使用版本回退功能了 ###
