@@ -1,3 +1,4 @@
+
 # Git学习笔记 #
 ## 安装Git ##
 ### Mac 安装 ###
@@ -247,3 +248,9 @@ git tag "name" [id] 用于新建一个标签，默认为HEAD，也可以指定�
 git tag -a "tagname" -m "blablabla..." [id] -a指定标签名，-m指定说明文字；  
 git tag -s "tagname" -m "blablabla..." [id] 可以用PGP签名标签；  
 git tag 可以查看所有标签  
+
+### 操作标签 ###
+git push origin "tagname" 可以推送一个本地标签；  
+git push origin --tags 可以推送全部未推送过的本地标签；  
+git tag -d "tagname" 可以删除一个本地标签；  
+git push origin :refs/tags/"tagname" 可以删除一个远程标签。  
