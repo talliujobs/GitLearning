@@ -177,3 +177,8 @@ git branch -d dev
 * 6ea306c 时光穿梭机，开头部分
 * 01ce643 创建版本库，OK
 </pre>
+
+### 分支管理策略 ###
+```
+ git checkout -b dev
+```
