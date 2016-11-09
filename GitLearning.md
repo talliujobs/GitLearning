@@ -1,5 +1,29 @@
-### 操作标签 ###
-git push origin "tagname" 可以推送一个本地标签；  
-git push origin --tags 可以推送全部未推送过的本地标签；  
-git tag -d "tagname" 可以删除一个本地标签；  
-git push origin :refs/tags/"tagname" 可以删除一个远程标签。  
+## 自定义Git ##
+### 忽略特殊文件 ###
+忽略文件的原则是：
+1. 忽略操作系统自动生成的文件，比如缩略图等；
+2. 忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；
+3. 忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
+
+创建.gitignore文件，示例如下：
+```
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# My configurations:
+db.ini
+deploy_key_rsa
+
+# for test
+*.class
+```
