@@ -52,3 +52,5 @@ git reset --hard 3628164
 #查看每一次操作的git命令
 git reflog
 ```
+### 工作区和暂存区 ###
+git add命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支
