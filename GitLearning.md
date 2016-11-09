@@ -149,3 +149,7 @@ git branch -d dev
 创建+切换分支：git checkout -b "name"  
 合并某分支到当前分支：git merge "name"  
 删除分支：git branch -d "name"  
+
+### 解决冲突 ###
+以下内容为测试
+Creating a branch is quick AND simple.
