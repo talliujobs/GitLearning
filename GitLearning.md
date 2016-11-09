@@ -241,3 +241,9 @@ git stash apply stash@{0}
 
 ## 标签管理 ##
 tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。比如 按照tag v1.2查找对应的commit
+
+### 创建标签 ###
+git tag "name" [id] 用于新建一个标签，默认为HEAD，也可以指定一个commit id；  
+git tag -a "tagname" -m "blablabla..." [id] -a指定标签名，-m指定说明文字；  
+git tag -s "tagname" -m "blablabla..." [id] 可以用PGP签名标签；  
+git tag 可以查看所有标签  
