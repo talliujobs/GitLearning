@@ -217,3 +217,6 @@ git stash pop
 #恢复指定的stash
 git stash apply stash@{0}
 ```
+
+### Feature分支 ###
+新建Feature分支见前文所述。如果Feature分支需要被取消，使用 ``` git branch -D "name" ``` 强行删除分支
