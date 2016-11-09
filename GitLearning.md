@@ -237,3 +237,7 @@ git stash apply stash@{0}
 * 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
 * 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
 * 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+
+
+## 标签管理 ##
+tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。比如 按照tag v1.2查找对应的commit
