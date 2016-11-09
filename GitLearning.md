@@ -126,4 +126,5 @@ git push -u origin master
  git clone git@github.com:michaelliao/gitskills.git
  ```
  上述命令会将文件克隆至当前路径下，文件夹名为仓库名
- 
+
+ ## 分支管理 ##
