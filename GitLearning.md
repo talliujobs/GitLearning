@@ -37,5 +37,18 @@ git status
 #查看具体修改的内容，按q退出
 git diff
 git add GitLearning.md
+```
 
-### 这是随便写的内容，接下来我要使用版本回退功能了 ###
+### 版本回退 ###
+```
+#查看文件修改的历史提交记录
+git log
+#查看简洁版的历史提交记录
+git log --pretty=oneline
+#版本回退。上一个版本就是HEAD^，上上一个版本就是HEAD^^，往上100个版本写成HEAD~100
+git reset --hard HEAD^
+#使用commit id来回退
+git reset --hard 3628164
+#查看每一次操作的git命令
+git reflog
+```
