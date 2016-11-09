@@ -121,10 +121,20 @@ git push -u origin master
 关联后，使用命令``` git push -u origin master ``` 第一次推送master分支的所有内容   
 此后，每次本地提交后，只要有必要，就可以使用命令 ``` git push origin master ```  推送最新修改
 
- ### 从远程库克隆 ###
- ```
- git clone git@github.com:michaelliao/gitskills.git
- ```
- 上述命令会将文件克隆至当前路径下，文件夹名为仓库名
+### 从远程库克隆 ###
+```
+git clone git@github.com:michaelliao/gitskills.git
+```
+上述命令会将文件克隆至当前路径下，文件夹名为仓库名
 
- ## 分支管理 ##
+## 分支管理 ##
+
+### ###
+```
+#创建dev分支，然后切换到dev分支，实际上相当于两条命令 git branch dev 和 git checkout dev
+git checkout -b dev
+#查看当前分支
+git branch
+#切换回master分支
+git checkout master
+ ```
