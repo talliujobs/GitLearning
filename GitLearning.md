@@ -21,8 +21,11 @@ git config --global user.email "talliujobs@gmail.com"
 ## 创建版本库 ##
 ```
  cd ~/Documents/notes/GitLearning
+ #把当前目录变成Git可以管理的仓库
  git init
+ #文件添加到仓库
  git add GitLearning.md
+ # -m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的
  git commit -m "创建版本库，OK"
 
  ```
